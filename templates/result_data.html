@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            
+            background-color: #C9FFFF;
+            
+         }
+
+         table {
+            width: 100%;
+            border-collapse: collapse;
+         }
+
+         th {
+            background-color: cyan;
+            padding: 8px;
+            text-align: left;
+            font-weight: bold;
+         }
+
+         td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+         }
+      </style>
+   </head>
+   <body>
+      <h1 style="text-align:center">Status</h1>
+      <table>
+         {% for key, value in result.items() %}
+         <tr>
+            <th>{{ key }}</th>
+            <td>{{ value }}</td>
+         </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>
